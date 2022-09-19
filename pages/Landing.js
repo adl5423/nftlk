@@ -1,6 +1,6 @@
 import React from 'react'
 import landing from '/styles/Landing.module.scss'
-import { SendTransaction } from './SendTransaction'
+import { SendTransaction } from '../components/SendTransaction'
 
 export default function Landing() {
 
