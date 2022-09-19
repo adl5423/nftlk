@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    padding: 8rem 4rem 0 4rem;
+    flex-direction: column;
+    background-color: black;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.title, .caption, .text {
+    color: white;
+}
+
+.title, .caption {
+    text-transform: uppercase;
+    text-decoration: none;
+}

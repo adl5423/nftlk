@@ -4,18 +4,22 @@ import {
   WagmiConfig,
   createClient,
   configureChains,
-  defaultChains,
 } from 'wagmi'
 import { publicProvider } from 'wagmi/providers/public'
 import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet'
 import { MetaMaskConnector } from 'wagmi/connectors/metaMask'
 import { InjectedConnector } from '@wagmi/core'
+import { infuraProvider } from 'wagmi/providers/infura'
 
+//Configuring Wagmi chain with Infura API, which will be Gorli
+//
 const { chains, provider, webSocketProvider } = configureChains(
-  [chain.polygonMumbai],
-  [publicProvider()],
+  [chain.goerli],
+  [infuraProvider({ apiKey: '1f82c4b469224a209bc22f14d00563e0' })],
 )
 
+//Creating Wagmi client to enable wallet connection on Coinbase Wallet, Metamask, and Injected Connection
+//
 const client = createClient({
   autoConnect: true,
   provider,
@@ -27,9 +31,14 @@ const client = createClient({
   ],
 });
 
+//Initializing main function
+//
 function MyApp({ Component, pageProps }) {
 
   return (
+
+    //Adding client
+    //
     <WagmiConfig client={client}>
       <Component {...pageProps} /> 
     </WagmiConfig>

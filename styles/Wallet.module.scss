@@ -1,0 +1,27 @@
+.on, .off {
+    width: 175px;
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 300ms ease-out;
+    color: black;
+}
+
+.on:hover {
+    transition: all 300ms ease-in;
+    transform: scale(0.90);
+    color: darkblue;
+    background-color: aquamarine;
+}
+
+.off:hover {
+    transition: all 300ms ease-in;
+    transform: scale(0.90);
+    color: fuchsia;
+    background-color: aquamarine;
+}
+

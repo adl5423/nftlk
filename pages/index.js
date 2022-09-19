@@ -1,6 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.scss'
+import styles from '/styles/Home.module.scss'
+import Navbar from './Navbar'
+import Footer from './Footer'
+import Landing from './Landing'
 
 export default function Home() {
   return (
@@ -12,11 +15,12 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        
+        <Navbar />
+        <Landing />
       </main>
 
       <footer className={styles.footer}>
-        
+        <Footer />
       </footer>
     </div>
   )
