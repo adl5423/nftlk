@@ -10,7 +10,7 @@ import send_form from '/styles/Send.module.scss'
 
 //Initiating transaction delivery function and use-debounce package/ethers
 //
-export function SendTransaction() {
+export const SendTransaction = () => {
     const [to, setTo] = React.useState('')
     const [debouncedTo] = useDebounce(to, 500)
 
