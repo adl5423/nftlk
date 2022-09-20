@@ -60,7 +60,7 @@ const WalletButton = () => {
           </button>
         ))}
   
-        {error}
+        {error && <p>{error.message}</p>}
       </div>
       </div>
     </div>
